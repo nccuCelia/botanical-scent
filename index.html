@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>植感尾香 | Botanical Scent Co.</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ═══ HEADER ═══ -->
+  <header id="site-header">
+    <div class="header-inner">
+      <a href="#hero">
+        <img class="logo-wrap" src="logo.png" alt="logo" title="logo">
+      </a>
+
+      <nav class="desktop-nav">
+        <a href="#about">關於我們</a>
+        <a href="#products">產品介紹</a>
+        <a href="#services">相關服務</a>
+        <a href="#tips">小知識</a>
+        <a href="#links">網站連結</a>
+        <a href="#products" class="nav-cta">立即選購</a>
+      </nav>
+
+      <button class="burger-btn" id="burgerBtn" aria-label="選單">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="#about" onclick="closeMobile()">關於我們</a>
+    <a href="#products" onclick="closeMobile()">產品介紹</a>
+    <a href="#services" onclick="closeMobile()">相關服務</a>
+    <a href="#tips" onclick="closeMobile()">小知識</a>
+    <a href="#links" onclick="closeMobile()">網站連結</a>
+    <a href="#products" onclick="closeMobile()">立即選購</a>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+
+    <!-- Decorative large candle BG SVG -->
+    <svg class="hero-deco-candle" viewBox="0 0 200 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="60" y="120" width="80" height="240" rx="6" fill="#9A6A38"/>
+      <rect x="70" y="130" width="60" height="220" rx="4" fill="#C8965A"/>
+      <ellipse cx="100" cy="120" rx="40" ry="12" fill="#E8BA82"/>
+      <line x1="100" y1="108" x2="100" y2="60" stroke="#5C3D2E" stroke-width="3"/>
+      <ellipse cx="100" cy="55" rx="10" ry="18" fill="rgba(200,150,90,0.3)"/>
+      <ellipse cx="100" cy="50" rx="5" ry="10" fill="rgba(230,180,100,0.5)"/>
+    </svg>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">A gentle glow of fragrance,<br/>sharing every moment of calm with furry friends.</p>
+      <h2 class="hero-title">
+        香氛微亮，<br/>
+        共享與毛孩<br/>療癒的每一刻。
+
+        <!-- <span>與毛孩共享</span>
+        <strong>自然香氛的</strong>
+        <span>溫柔時光</span> -->
+      </h2>
+      <p class="hero-sub">
+        堅持天然大豆蠟，嚴格篩選每一縷香氣，<br />
+        讓家中每一個角落，都對你的毛孩溫柔以待。
+      </p>
+      <div class="hero-actions">
+        <a href="#products" class="btn-primary">探索商品系列</a>
+        <a href="#about" class="btn-outline">了解品牌故事</a>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual reveal">
+          <div class="about-frame">
+            <div class="about-frame-inner"></div>
+            <!-- Candle illustration -->
+            <svg class="candle-svg-big" viewBox="0 0 160 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="40" y="100" width="80" height="200" rx="8" fill="#C8965A"/>
+              <rect x="50" y="110" width="60" height="180" rx="5" fill="#E8BA82" opacity="0.6"/>
+              <ellipse cx="80" cy="100" rx="40" ry="14" fill="#9A6A38"/>
+              <ellipse cx="80" cy="96" rx="28" ry="9" fill="#E8BA82"/>
+              <line x1="80" y1="86" x2="80" y2="48" stroke="#5C3D2E" stroke-width="3" stroke-linecap="round"/>
+              <ellipse cx="80" cy="42" rx="9" ry="16" fill="rgba(200,150,90,0.35)"/>
+              <ellipse cx="80" cy="36" rx="5" ry="9" fill="rgba(255,200,100,0.55)"/>
+              <ellipse cx="80" cy="32" rx="2.5" ry="5" fill="rgba(255,230,150,0.8)"/>
+              <path d="M 80 200 Q 62 220 80 240 Q 98 220 80 200" fill="rgba(247,240,230,0.15)"/>
+              <path d="M 55 150 Q 75 165 55 180" stroke="rgba(247,240,230,0.2)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            </svg>
+            <div class="about-deco-border"></div>
+          </div>
+          <div class="about-badge">
+            <span class="num">100%</span>
+            <span class="lbl">天然大豆蠟</span>
+          </div>
+        </div>
+
+        <div class="about-text">
+          <p class="section-label reveal">Our Story</p>
+          <h2 class="section-title reveal reveal-delay-1">從一支蠟燭<br />開始的溫柔守護</h2>
+          <div class="section-divider reveal reveal-delay-2"></div>
+          <p class="section-body reveal reveal-delay-2">
+            <span class="paragraph">曾經，我們也像許多人一樣，習慣在忙碌後點亮香氛尋求療癒。<br/></span>
+            <span class="paragraph">直到發現新香氣讓家裡的寵物頻繁打噴嚏，才驚覺對人類而言的放鬆，對嗅覺敏感千倍、代謝系統特殊的牠們，卻是一場無形的負擔。<br/></span>
+            <span class="paragraph">為了兼顧生活儀式感與寵物健康，「植感尾香」 因此誕生。我們決定捨棄廉價石蠟與不寵物友善的精油成分，回歸最純粹的本質。<br/></span>
+            當燭火點燃，溫和氣息不僅療癒空間，也讓妳與毛孩在同一個節奏裡安定下來。質感生活，不應以犧牲健康為代價；那抹微光，應是全家人都能安心共享的幸福。
+            <!-- 植感尾香誕生於一位芳療師與她的毛孩相處的午後。她發現，市面上的香氛蠟燭對貓狗的嗅覺與健康存在潛在風險，於是她決定親手調配——以天然大豆蠟為基底，嚴格排除柑橘、檸檬等對寵物有害的香料，讓香氛不再是選擇題，而是你與毛孩共享的日常儀式。 -->
+          </p>
+          <div class="pillars reveal reveal-delay-3">
+            <div class="pillar">
+              <div class="pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="#C8965A" stroke-width="1.5" fill="none"/>
+                </svg>
+              </div>
+              <div class="pillar-text">
+                <h4>嚴格成分把關</h4>
+                <p>杜絕對寵物有害成分，每款香氛原料皆來自天然植物萃取，不含有毒精油。</p>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="9" stroke="#C8965A" stroke-width="1.5"/>
+                  <path d="M8 12l3 3 5-5" stroke="#C8965A" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="pillar-text">
+                <h4>天然大豆蠟製作</h4>
+                <p>採用可再生大豆蠟，燃燒時產生更少煙霧，為毛孩創造更潔淨的空氣環境。</p>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="#C8965A" stroke-width="1.5" fill="none"/>
+                </svg>
+              </div>
+              <div class="pillar-text">
+                <h4>與毛孩共存的設計哲學</h4>
+                <p>從香氣濃度到容器安全，每一個細節都為寵物飼主與動物的和諧共處而設計。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PRODUCTS SLIDESHOW ═══ -->
+  <section id="products">
+    <div class="container">
+      <div class="products-header">
+        <div>
+          <p class="section-label reveal">Our Collection</p>
+          <h2 class="section-title reveal reveal-delay-1">精選香氛系列</h2>
+        </div>
+        <a href="#" class="btn-outline reveal reveal-delay-1">查看全部商品</a>
+      </div>
+
+      <div class="slideshow-wrapper">
+        <div class="slideshow-track" id="slideshowTrack">
+
+          <!-- Card 1 -->
+          <div class="slide-card">
+            <div class="slide-card-img">
+              <div class="slide-card-bg" style="background: linear-gradient(145deg, #EDE0CE, #D4C4A8);">
+                <svg class="card-candle" viewBox="0 0 120 220" fill="none">
+                  <rect x="25" y="70" width="70" height="135" rx="6" fill="#C8965A"/>
+                  <ellipse cx="60" cy="70" rx="35" ry="10" fill="#9A6A38"/>
+                  <ellipse cx="60" cy="66" rx="24" ry="7" fill="#E8BA82"/>
+                  <line x1="60" y1="58" x2="60" y2="30" stroke="#5C3D2E" stroke-width="2.5" stroke-linecap="round"/>
+                  <ellipse cx="60" cy="25" rx="7" ry="12" fill="rgba(200,150,90,0.4)"/>
+                  <ellipse cx="60" cy="20" rx="4" ry="7" fill="rgba(255,200,120,0.6)"/>
+                  <!-- Leaves around candle -->
+                  <path d="M 20 120 Q 0 100 15 85 Q 30 100 20 120" fill="rgba(138,154,122,0.5)"/>
+                  <path d="M 100 140 Q 118 118 106 102 Q 90 120 100 140" fill="rgba(138,154,122,0.4)"/>
+                </svg>
+              </div>
+            </div>
+            <div class="slide-card-body">
+              <p class="slide-card-tag">No. 01 &mdash; Forest Calm</p>
+              <h3 class="slide-card-name">森林呼吸</h3>
+              <p class="slide-card-name-en">Forest Breath</p>
+              <p class="slide-card-desc">雪松木、廣藿香與白樺，重現清晨森林的靜謐空氣，舒緩焦慮，適合需要放鬆的毛孩家庭。</p>
+              <div class="slide-card-foot">
+                <span class="price">NT$ 680</span>
+                <span class="pet-safe-badge">Paw-Safe</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="slide-card">
+            <div class="slide-card-img">
+              <div class="slide-card-bg" style="background: linear-gradient(145deg, #E8D8C0, #DEC9A0);">
+                <svg class="card-candle" viewBox="0 0 120 220" fill="none">
+                  <rect x="30" y="75" width="60" height="130" rx="8" fill="#E8BA82"/>
+                  <rect x="38" y="82" width="44" height="116" rx="5" fill="rgba(247,240,230,0.4)"/>
+                  <ellipse cx="60" cy="75" rx="30" ry="9" fill="#C8965A"/>
+                  <line x1="60" y1="65" x2="60" y2="36" stroke="#5C3D2E" stroke-width="2" stroke-linecap="round"/>
+                  <ellipse cx="60" cy="30" rx="6" ry="11" fill="rgba(210,160,80,0.45)"/>
+                  <ellipse cx="60" cy="25" rx="3.5" ry="6" fill="rgba(255,210,130,0.65)"/>
+                  <path d="M 14 100 Q -2 80 14 62 Q 30 80 14 100" fill="rgba(180,200,160,0.5)"/>
+                  <path d="M 106 115 Q 122 95 108 76 Q 92 96 106 115" fill="rgba(160,180,140,0.45)"/>
+                  <circle cx="42" cy="140" r="4" fill="rgba(200,150,90,0.2)"/>
+                  <circle cx="78" cy="155" r="3" fill="rgba(200,150,90,0.15)"/>
+                </svg>
+              </div>
+            </div>
+            <div class="slide-card-body">
+              <p class="slide-card-tag">No. 02 &mdash; Cozy Afternoon</p>
+              <h3 class="slide-card-name">午後溫語</h3>
+              <p class="slide-card-name-en">Warm Afternoon</p>
+              <p class="slide-card-desc">香草豆莢、肉桂葉與椰奶，宛如午後陽光灑落，給予你與毛孩最溫柔的居家療癒。</p>
+              <div class="slide-card-foot">
+                <span class="price">NT$ 720</span>
+                <span class="pet-safe-badge">Paw-Safe</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="slide-card">
+            <div class="slide-card-img">
+              <div class="slide-card-bg" style="background: linear-gradient(145deg, #D8CFC0, #C8BCA8);">
+                <svg class="card-candle" viewBox="0 0 120 220" fill="none">
+                  <rect x="22" y="65" width="76" height="140" rx="5" fill="#9A6A38"/>
+                  <rect x="32" y="74" width="56" height="124" rx="3" fill="rgba(200,150,90,0.5)"/>
+                  <ellipse cx="60" cy="65" rx="38" ry="11" fill="#7A5542"/>
+                  <ellipse cx="60" cy="61" rx="26" ry="8" fill="#C8965A"/>
+                  <line x1="60" y1="52" x2="60" y2="24" stroke="#3A2A1E" stroke-width="2" stroke-linecap="round"/>
+                  <ellipse cx="60" cy="18" rx="8" ry="14" fill="rgba(180,120,60,0.4)"/>
+                  <ellipse cx="60" cy="12" rx="4.5" ry="8" fill="rgba(240,190,100,0.55)"/>
+                  <path d="M 10 90 Q -8 68 8 48 Q 28 70 10 90" fill="rgba(130,160,120,0.55)"/>
+                  <path d="M 110 108 Q 128 86 114 66 Q 94 88 110 108" fill="rgba(120,150,110,0.5)"/>
+                  <path d="M 18 130 Q 2 115 12 100" stroke="rgba(130,160,120,0.4)" stroke-width="8" fill="none" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="slide-card-body">
+              <p class="slide-card-tag">No. 03 &mdash; Earth & Herb</p>
+              <h3 class="slide-card-name">大地草木</h3>
+              <p class="slide-card-name-en">Earth & Herb</p>
+              <p class="slide-card-desc">鼠尾草、岩蘭草與沉香，以大地的沉穩為底調，平衡身心，讓焦躁的毛孩也能安然入眠。</p>
+              <div class="slide-card-foot">
+                <span class="price">NT$ 750</span>
+                <span class="pet-safe-badge">Paw-Safe</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="slide-card">
+            <div class="slide-card-img">
+              <div class="slide-card-bg" style="background: linear-gradient(145deg, #EAE0D0, #D8CCBA);">
+                <svg class="card-candle" viewBox="0 0 120 220" fill="none">
+                  <rect x="35" y="80" width="50" height="125" rx="10" fill="#E8BA82"/>
+                  <ellipse cx="60" cy="80" rx="25" ry="8" fill="#C8965A"/>
+                  <line x1="60" y1="71" x2="60" y2="44" stroke="#5C3D2E" stroke-width="2" stroke-linecap="round"/>
+                  <ellipse cx="60" cy="38" rx="6" ry="10" fill="rgba(200,150,90,0.4)"/>
+                  <ellipse cx="60" cy="33" rx="3.5" ry="6" fill="rgba(255,220,140,0.6)"/>
+                  <path d="M 20 100 Q 5 82 18 66 Q 34 82 20 100" fill="rgba(190,210,180,0.5)"/>
+                  <path d="M 100 118 Q 115 100 102 84 Q 86 100 100 118" fill="rgba(180,200,170,0.45)"/>
+                  <path d="M 22 140 Q 8 126 16 110" stroke="rgba(190,210,180,0.4)" stroke-width="6" fill="none" stroke-linecap="round"/>
+                  <ellipse cx="55" cy="150" rx="3" ry="3" fill="rgba(200,150,90,0.2)"/>
+                </svg>
+              </div>
+            </div>
+            <div class="slide-card-body">
+              <p class="slide-card-tag">No. 04 &mdash; Soft Bloom</p>
+              <h3 class="slide-card-name">柔花輕語</h3>
+              <p class="slide-card-name-en">Soft Floral</p>
+              <p class="slide-card-desc">茉莉、玫瑰木與白麝香，輕盈細膩的花香，專為敏感體質設計，讓空間瀰漫安心的柔和氣息。</p>
+              <div class="slide-card-foot">
+                <span class="price">NT$ 690</span>
+                <span class="pet-safe-badge">Paw-Safe</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="slide-card">
+            <div class="slide-card-img">
+              <div class="slide-card-bg" style="background: linear-gradient(145deg, #DDD0BC, #CCB89E);">
+                <svg class="card-candle" viewBox="0 0 120 220" fill="none">
+                  <rect x="28" y="72" width="64" height="133" rx="6" fill="#9A6A38"/>
+                  <rect x="36" y="80" width="48" height="117" rx="4" fill="rgba(232,186,130,0.55)"/>
+                  <ellipse cx="60" cy="72" rx="32" ry="10" fill="#7A5542"/>
+                  <ellipse cx="60" cy="68" rx="22" ry="7" fill="#C8965A"/>
+                  <line x1="60" y1="60" x2="60" y2="30" stroke="#3A2A1E" stroke-width="2.5" stroke-linecap="round"/>
+                  <ellipse cx="60" cy="24" rx="7" ry="13" fill="rgba(175,115,55,0.4)"/>
+                  <ellipse cx="60" cy="18" rx="4" ry="7.5" fill="rgba(245,195,105,0.6)"/>
+                  <path d="M 12 95 Q -5 76 10 58 Q 26 76 12 95" fill="rgba(160,140,100,0.45)"/>
+                  <path d="M 108 112 Q 125 93 111 75 Q 95 93 108 112" fill="rgba(150,130,90,0.4)"/>
+                </svg>
+              </div>
+            </div>
+            <div class="slide-card-body">
+              <p class="slide-card-tag">No. 05 &mdash; Rainy Season</p>
+              <h3 class="slide-card-name">雨後初晴</h3>
+              <p class="slide-card-name-en">After Rain</p>
+              <p class="slide-card-desc">青苔、冷杉與乾燥木質，重現雨後山林的清新，帶走室內潮濕氣息，為毛孩打造清爽舒適環境。</p>
+              <div class="slide-card-foot">
+                <span class="price">NT$ 710</span>
+                <span class="pet-safe-badge">Paw-Safe</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="slider-controls">
+        <button class="slider-btn" id="prevBtn" aria-label="上一個">
+          <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="slider-dots" id="sliderDots">
+          <div class="dot active" data-index="0"></div>
+          <div class="dot" data-index="1"></div>
+          <div class="dot" data-index="2"></div>
+        </div>
+        <button class="slider-btn" id="nextBtn" aria-label="下一個">
+          <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ QUOTE BAND ═══ -->
+  <!-- <div class="quote-band">
+    <blockquote class="quote-text reveal">
+      「」
+    </blockquote>
+    <p class="quote-author reveal reveal-delay-1">— 植感尾香 創辦人</p>
+  </div> -->
+
+  <!-- ═══ SERVICES ═══ -->
+  <section id="services">
+    <div class="container">
+      <p class="section-label reveal">Our Services</p>
+      <h2 class="section-title reveal reveal-delay-1">相關服務</h2>
+      <div class="section-divider reveal reveal-delay-2"></div>
+
+      <div class="services-grid reveal reveal-delay-2">
+        <div class="service-item">
+          <p class="service-num">01</p>
+          <h3 class="service-title">客製化香氛調配</h3>
+          <p class="service-desc">根據您家毛孩的品種、年齡與敏感狀況，由專業芳療師為您量身調配最適合的香氛比例，確保百分之百安全無虞。</p>
+        </div>
+        <div class="service-item">
+          <p class="service-num">02</p>
+          <h3 class="service-title">訂閱香氛計畫</h3>
+          <p class="service-desc">每月精選一款當季限定香氣配方，搭配詳細的使用說明與毛孩芳療小知識，讓生活儀式感永不間斷。</p>
+        </div>
+        <div class="service-item">
+          <p class="service-num">03</p>
+          <h3 class="service-title">企業禮品訂製</h3>
+          <p class="service-desc">提供品牌客製化服務，包含專屬印刷包裝與標籤設計，適合寵物友善企業、動物醫院與生活風格品牌的禮品贈送需求。</p>
+        </div>
+        <div class="service-item">
+          <p class="service-num">04</p>
+          <h3 class="service-title">芳療工作坊</h3>
+          <p class="service-desc">不定期舉辦線上與線下的天然香氛工作坊，帶您深入了解植物香氣與寵物的關係，親手打造屬於你們的專屬蠟燭。</p>
+        </div>
+        <div class="service-item">
+          <p class="service-num">05</p>
+          <h3 class="service-title">寵物安全諮詢</h3>
+          <p class="service-desc">提供免費的線上諮詢服務，針對各種居家香氛產品的寵物安全性進行專業評估，守護每一位毛孩主人的安心選擇。</p>
+        </div>
+        <div class="service-item">
+          <p class="service-num">06</p>
+          <h3 class="service-title">聯名合作計畫</h3>
+          <p class="service-desc">歡迎與理念相符的寵物品牌、獸醫診所及生活風格媒體合作，共同推廣天然、健康的寵物友善生活文化。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TIPS ═══ -->
+  <section id="tips">
+    <div class="container">
+      <p class="section-label reveal">Pet Knowledge</p>
+      <h2 class="section-title reveal reveal-delay-1">毛孩芳香小知識</h2>
+      <div class="section-divider reveal reveal-delay-2"></div>
+      <p class="section-body reveal reveal-delay-2" style="max-width:560px;">關於寵物與香氛，你可能不知道的事。我們整理了常見問題，希望讓每位毛孩家長更安心。</p>
+
+      <div class="tips-grid">
+        <div class="tip-card reveal">
+          <p class="tip-no">Knowledge 01</p>
+          <h3 class="tip-q">為什麼柑橘類精油對貓咪有害？</h3>
+          <p class="tip-a">柑橘類植物含有「檸烯（Limonene）」與「芳樟醇（Linalool）」，貓咪的肝臟缺乏代謝這類成分的酵素，長期接觸可能導致中毒反應。植感尾香的所有產品均不含柑橘類成分。</p>
+        </div>
+        <div class="tip-card reveal reveal-delay-1">
+          <p class="tip-no">Knowledge 02</p>
+          <h3 class="tip-q">大豆蠟為什麼比石蠟更安全？</h3>
+          <p class="tip-a">石蠟燃燒時會釋放甲苯、苯等揮發性有機物，對人和動物的呼吸系統有潛在危害。天然大豆蠟由植物萃取，燃燒更潔淨，煙霧更少，是寵物家庭的理想選擇。</p>
+        </div>
+        <div class="tip-card reveal reveal-delay-2">
+          <p class="tip-no">Knowledge 03</p>
+          <h3 class="tip-q">狗狗的嗅覺比人類靈敏多少倍？</h3>
+          <p class="tip-a">狗狗的嗅覺接受器約是人類的 40 倍以上，因此對香氛濃度特別敏感。使用香氛蠟燭時，建議在通風良好的空間，並避免長時間密閉空間使用，讓毛孩保有自由移動的空間。</p>
+        </div>
+        <div class="tip-card reveal reveal-delay-3">
+          <p class="tip-no">Knowledge 04</p>
+          <h3 class="tip-q">哪些植物香氣對寵物相對友善？</h3>
+          <p class="tip-a">一般而言，薰衣草（低濃度）、雪松木、廣藿香、香草等香調對寵物較為溫和。但每隻動物體質不同，首次使用時建議少量、短時間測試，觀察毛孩反應，若有異常請立即通風並諮詢獸醫。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ LINKS ═══ -->
+  <section id="links">
+    <div class="container">
+      <p class="section-label reveal">Explore More</p>
+      <h2 class="section-title reveal reveal-delay-1">網站連結</h2>
+      <div class="section-divider reveal reveal-delay-2"></div>
+
+      <div class="links-grid">
+        <a href="#about" class="link-card reveal">
+          <p class="link-card-label">About</p>
+          <h3 class="link-card-title">關於植感尾香</h3>
+          <div class="link-card-arrow">
+            <svg viewBox="0 0 12 12"><path d="M2 10L10 2M10 2H4M10 2V8"/></svg>
+          </div>
+        </a>
+        <a href="#products" class="link-card reveal reveal-delay-1">
+          <p class="link-card-label">Products</p>
+          <h3 class="link-card-title">香氛蠟燭系列</h3>
+          <div class="link-card-arrow">
+            <svg viewBox="0 0 12 12"><path d="M2 10L10 2M10 2H4M10 2V8"/></svg>
+          </div>
+        </a>
+        <a href="#services" class="link-card reveal reveal-delay-2">
+          <p class="link-card-label">Services</p>
+          <h3 class="link-card-title">品牌服務一覽</h3>
+          <div class="link-card-arrow">
+            <svg viewBox="0 0 12 12"><path d="M2 10L10 2M10 2H4M10 2V8"/></svg>
+          </div>
+        </a>
+        <a href="#tips" class="link-card reveal">
+          <p class="link-card-label">Knowledge</p>
+          <h3 class="link-card-title">毛孩芳香小知識</h3>
+          <div class="link-card-arrow">
+            <svg viewBox="0 0 12 12"><path d="M2 10L10 2M10 2H4M10 2V8"/></svg>
+          </div>
+        </a>
+        <a href="#" class="link-card reveal reveal-delay-1">
+          <p class="link-card-label">Instagram</p>
+          <h3 class="link-card-title">追蹤我們的 Instagram</h3>
+          <div class="link-card-arrow">
+            <svg viewBox="0 0 12 12"><path d="M2 10L10 2M10 2H4M10 2V8"/></svg>
+          </div>
+        </a>
+        <a href="#" class="link-card reveal reveal-delay-2">
+          <p class="link-card-label">LINE Official</p>
+          <h3 class="link-card-title">加入 LINE 官方帳號</h3>
+          <div class="link-card-arrow">
+            <svg viewBox="0 0 12 12"><path d="M2 10L10 2M10 2H4M10 2V8"/></svg>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <figure>
+            <img class="logo-wrap" src="logo.png" alt="logo" title="logo">
+          </figure>
+          <p class="footer-tagline">
+            與毛孩共享每一縷天然香氣，<br />
+            以細膩之心，守護每個生命的健康。<br />
+            <span style="font-size:0.8rem; color: rgba(200,150,90,0.5); letter-spacing: 0.15em;">Crafted with love, safe for paws.</span>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>關於我們</h5>
+          <ul>
+            <li><a href="#about">品牌故事</a></li>
+            <li><a href="#about">品牌理念</a></li>
+            <li><a href="#about">創辦人介紹</a></li>
+            <li><a href="#about">媒體報導</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>產品介紹</h5>
+          <ul>
+            <li><a href="#products">香氛蠟燭</a></li>
+            <li><a href="#products">限定禮盒</a></li>
+            <li><a href="#products">訂閱方案</a></li>
+            <li><a href="#products">客製化服務</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>相關服務</h5>
+          <ul>
+            <li><a href="#services">芳療工作坊</a></li>
+            <li><a href="#services">企業合作</a></li>
+            <li><a href="#services">寵物安全諮詢</a></li>
+            <li><a href="#services">聯名計畫</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>小知識</h5>
+          <ul>
+            <li><a href="#tips">寵物與香氛</a></li>
+            <li><a href="#tips">成分安全指南</a></li>
+            <li><a href="#tips">使用注意事項</a></li>
+            <li><a href="#tips">常見問題</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; 2026 Botanical Scent Co. All Rights Reserved.
+        </p>
+        <div class="footer-social">
+          <!-- Instagram icon -->
+          <a href="#" class="social-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="rgba(247,240,230,0.5)" stroke="none"/>
+            </svg>
+          </a>
+          <!-- Facebook icon -->
+          <a href="#" class="social-link" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </svg>
+          </a>
+          <!-- LINE icon -->
+          <a href="#" class="social-link" aria-label="LINE">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M21 11.5C21 7.36 16.97 4 12 4S3 7.36 3 11.5c0 3.72 3.3 6.86 7.78 7.43.3.06.72.2.82.45.1.23.06.58.03.8l-.13.8c-.04.23-.18.91.8.5.98-.41 5.28-3.11 7.2-5.33A6.64 6.64 0 0 0 21 11.5z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
