@@ -28,6 +28,7 @@ window.addEventListener('scroll', () => {
 // ─── Slideshow ───
 const track = document.getElementById('slideshowTrack');
 const dots = document.querySelectorAll('.dot');
+const pauseBtn = document.getElementById('pauseBtn')
 let currentIdx = 0;
 let cardsPerView = 3;
 let totalCards = 5;
@@ -63,6 +64,17 @@ document.getElementById('nextBtn').addEventListener('click', () => {
     goToSlide(currentIdx + 1 > maxIdx ? 0 : currentIdx + 1);
     restartAuto();
 });
+pauseBtn.addEventListener('click', function() {
+    if (this.classList.contains('pause')) {
+        this.classList.remove('pause');
+        this.classList.add('play');
+        stopAuto();
+    } else {
+        this.classList.remove('play');
+        this.classList.add('pause');
+        restartAuto();
+    }
+});
 dots.forEach(dot => {
     dot.addEventListener('click', () => {
     goToSlide(parseInt(dot.dataset.index));
@@ -77,7 +89,10 @@ function startAuto() {
 }
 function restartAuto() {
     clearInterval(autoInterval);
-    startAuto();
+    if(pauseBtn.classList.contains('pause')) startAuto();
+}
+function stopAuto() {
+    clearInterval(autoInterval);
 }
 
 updateMaxIdx();
